@@ -42,9 +42,10 @@ module.exports = {
 		rules: [
 			// All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
 			{ test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-
 			// All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-			{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+			{ test: /\.js$/, loader: "source-map-loader", enforce: "pre" },
+			{ test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']},
+			{ test: /\.css$/, use: ['style-loader', 'css-loader']},
 		]
 	},
 
@@ -64,7 +65,7 @@ module.exports = {
 		// Serve from the 'dist' directory
 		contentBase: path.join(__dirname, 'dist'),
 		// Enable Hot Module Replacement (and only reloads if build succeeds)
-		hotOnly: true,
+		// hotOnly: true,
 		port: 9000,
 		host: '0.0.0.0',
 		before: function (app, server) {
