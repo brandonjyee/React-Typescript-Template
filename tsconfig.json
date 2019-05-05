@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+    "module": "commonjs",
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+		"target": "es6"
+	},
+	"compileOnSave": false,
+	"formatCodeOptions": {
+		"convertTabsToSpaces": false
+	}
+}
