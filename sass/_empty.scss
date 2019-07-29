@@ -1,0 +1,13 @@
+.card-empty {
+	position: relative;
+	margin: 0 0.9375rem 0.5rem;
+	border: 1px solid $card-border-color;
+	border-radius: $card-border-radius;
+	background-color: $card-background-color;
+	padding: 0.5rem 1rem;
+	text-align: center;
+
+	.card-empty-link {
+		margin-left: 6px;
+	}
+}

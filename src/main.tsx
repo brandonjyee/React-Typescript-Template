@@ -1,13 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Router } from 'react-router-dom';
 
-import { Hello } from './components/Hello';
+import history from './history';
+import Routes from './routes';
 import '../sass/index.scss';
 
+/*
+Top-level Hierarchy:
+main.tsx -> routes.tsx
+*/
 ReactDOM.render(
-	<div>
-		<div className='test-style'><Hello msg='world!!' /></div>
-		<div className='test-style'><Hello msg='world2' /></div>
-	</div>,
+	<Router history={history}>
+		<Routes />
+	</Router>,
 	document.getElementById('app'),
 );
